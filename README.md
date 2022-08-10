@@ -1,52 +1,41 @@
 # LendingClub EDA
-> Outline a brief description of your project.
 
+Develop recommendations to predict ability to repay loans based on applicant's profile when the company receives a loan application. We will focus on defining the driving factors behind loan default, so that the company can utilize this data to perform risk assessment.
 
 ## Table of Contents
 * [General Info](#general-information)
+* [Data Analysis & Cleanup](#data-analysis--cleanup)
 * [Technologies Used](#technologies-used)
 * [Conclusions](#conclusions)
-* [Acknowledgements](#acknowledgements)
-
-<!-- You can include any other section that is pertinent to your problem -->
 
 ## General Information
-- Provide general information about your project here.
-- What is the background of your project?
-- What is the business probem that your project is trying to solve?
-- What is the dataset that is being used?
+- LendingClub provides loans of various types to urban customers, when the company receives an application it has to make a decision based on applicant's risk profile. Basically there are two risks, i.e
+    - Applicant is likely to repay, but application not approved leading to loss of business.
+    - Applicant is not likely to repay, but application is approved, leading to financial loss.
+- This project will focus on identifying key driver variables that will help determine an applicant's ability to repay the loan.
+- Dataset has information about past loan applicant's whether they defaulter or not, we will use this information to identify pattern which will indicate if an applicant is likely to default or not.
 
-<!-- You don't have to answer all the questions - just the ones relevant to your project. -->
+## Data Analysis & Cleanup:
+    - Dataset has lot of missing values
+        - All columns that has more than 90% missing values has been removed.
+        - All rows with more than 25% missing values has been removed.
+    - Impute Variables
+        - emp_length variable need to be imputed.
+    - Target Variables
+        - loan_default_status variable has been created as boolean to aggregate and plot status.
+    - Driver Variables
+        - grade, purpose, emp_length, home_ownership, application_type, addr_state
 
 ## Conclusions
-- Conclusion 1 from the analysis
-- Conclusion 2 from the analysis
-- Conclusion 3 from the analysis
-- Conclusion 4 from the analysis
-
-<!-- You don't have to answer all the questions - just the ones relevant to your project. -->
-
+- An applicant is more likely to default loan re-payment, when type of residence is Rented or Mortgaged when compared to Owned.
+- An applicant is more likely to default loan re-payment, when purpose of loan is for debt consolidation as opposed to any other purpose.
+- Applicant's that has worked at an employer for longer term, i.e. 10+ years tend to re-pay better.
+- Applicants belonging to E,F,G grades are more likely to default on loan re-payment.
+- Applicants from state of California has higher changes of a loan default than most other states.
 
 ## Technologies Used
-- library - version 1.0
-- library - version 2.0
-- library - version 3.0
-
-<!-- As the libraries versions keep on changing, it is recommended to mention the version of library used in this project -->
-
-## Acknowledgements
-Give credit here.
-- This project was inspired by...
-- References if any...
-- This project was based on [this tutorial](https://www.example.com).
-
+- python 3
+- jupyter notebook
 
 ## Contact
-Created by [@githubusername] - feel free to contact me!
-
-
-<!-- Optional -->
-<!-- ## License -->
-<!-- This project is open source and available under the [... License](). -->
-
-<!-- You don't have to include all sections - just the one's relevant to your project -->
+Created by [@arooshp] [@n-rajeswari]!
